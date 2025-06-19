@@ -108,12 +108,3 @@ window.addEventListener('scroll', function() {
 });
 
 // Add hover effect to profile image
-const profileImg = document.querySelector(".profile-img");
-if (profileImg) {
-  profileImg.addEventListener('mouseenter', () => {
-    profileImg.style.transform = "scale(1.1)";
-  });
-  profileImg.addEventListener('mouseleave', () => {
-    profileImg.style.transform = "scale(1)";
-  });
-}
