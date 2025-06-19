@@ -1,39 +1,64 @@
- /* Typewriter effect */
-  .typewriter {
-    overflow: hidden;
-    border-right: 2px solid #b820e6;
-    white-space: nowrap;
-    margin: 0 auto;
-    letter-spacing: 1px;
-    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.typewriter {
+  overflow: hidden;
+  border-right: 2px solid #b820e6;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 1px;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0
   }
 
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+  to {
+    width: 100%
+  }
+}
+
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent
   }
 
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: #b820e6 }
+  50% {
+    border-color: #b820e6
   }
+}
 
-   [data-animate] {
-        opacity: 0;
-        transform: translateY(30px);
-        transition: all 0.8s ease-out;
-      }
+[data-animate] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
 
-      [data-animate].animate {
-        opacity: 1;
-        transform: translateY(0);
-      }
+[data-animate].animate {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-      /* Add to your style.css or style tag */
+/* Add to your style.css or style tag */
 @keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-15px); }
-  100% { transform: translateY(0px); }
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .profile-img {
@@ -54,7 +79,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
   transform: translateX(-100%);
   animation: shimmer 3s infinite;
 }
